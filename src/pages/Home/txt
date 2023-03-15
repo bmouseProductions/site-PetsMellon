@@ -1,0 +1,185 @@
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Header } from "../../componets/Header"
+import QuemSomos from '../../assets/image/sobrepets.webp'
+import Produto01 from '../../assets/image/produto01.png'
+import Produto02 from '../../assets/image/produto02.png'
+import Produto03 from '../../assets/image/produto03.png'
+import Produto04 from '../../assets/image/produto04.png'
+import BannerSobre from '../../assets/image/bannerSobre.png'
+import { useNavigate } from 'react-router-dom';
+import { Sobre,  Descricao, Title, Image, Produtos, Customizacao, Cards } from './style';
+import Carousel from 'react-bootstrap/Carousel';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Card from 'react-bootstrap/Card';
+import { TfiLocationPin } from 'react-icons/tfi';
+import { GiSittingDog } from 'react-icons/gi';
+import { FaCat } from 'react-icons/fa';
+import { FaEarlybirds } from 'react-icons/fa';
+import { FaPaw } from 'react-icons/fa';
+import { SiMaterialdesignicons } from 'react-icons/si';
+
+/* /index.html 200
+
+export const Home=()=>{
+
+    const navigate = useNavigate();
+
+    function redirectSobre (){
+        navigate('/conheca')
+    }
+
+    function redirectProdutos (){
+        navigate('/produtos')
+    }
+
+    return (
+        <div className='container-fluid p-0 bg-light'>
+        <Header/>
+        <Sobre className='bg-light '>
+            <Carousel className=''>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100 img-carousel-md"
+                    src={BannerSobre}
+                    alt="First slide"/>
+                </Carousel.Item>
+            </Carousel> 
+            <Cards className='text-white'>
+                <div className='respo-md-cards d-flex flex-column'>
+                    <Card className='d-flex align-items-center justify-content-center p-1 rounded-0 rounded-top border-0 border-bottom-1' style={{backgroundColor:'#FF9200', height:'50px'}}>
+                        <Card.Body className='d-flex align-items-center justify-content-center gap-3 text-center' style={{fontSize:'0.8rem'}}> <TfiLocationPin size={36}/>Av. Emílio Arroio Hernades, 3299 - Pozzobon, Votuporanga - SP, 15503-027</Card.Body>
+                    </Card>
+                    <Card className='d-flex align-items-center justify-content-center p-1 rounded-0 border-0' style={{backgroundColor:'#491A76', height:'50px'}}>
+                        <Card.Body className='d-flex align-items-center justify-content-center gap-3'><GiSittingDog size={26}/>Tudo para o seu Cachorro.</Card.Body>
+                    </Card>
+                    <Card className='d-flex align-items-center justify-content-center p-1 rounded-0 border-0' style={{backgroundColor:'#491A76', height:'50px'}}>
+                        <Card.Body className='d-flex align-items-center justify-content-center gap-3'><FaCat size={26}/>Tudo para o seu Gato.</Card.Body>
+                    </Card>
+                    <Card className='d-flex align-items-center justify-content-center p-1 border-0 rounded-0 rounded-bottom' style={{backgroundColor:'#FF9200', height:'50px'}}>
+                        <Card.Body className='d-flex align-items-center justify-content-center gap-3'> <SiMaterialdesignicons size={26}/>Tudo para a sua Marca.</Card.Body>
+                    </Card>
+                </div>
+            </Cards>
+            <div className='w-100 bg-white'>
+                    <img src={QuemSomos} alt="" className='rounded-1' style={{width:'100%'}} />
+                    <div className=''>
+                        <Card style={{ width: '100%' }} className='text-left border-0 mt-4 p-0 m-0 mb-4'>
+                            <Card.Body className='w-100 p-' style={{BackgroundColor:"#F0EFE9"}}>
+                                <Card.Title className="mb-2 p-0 m-0 text-muted fs-1 text-left">Sobre Nós</Card.Title>
+                                <Card.Text className='text-dark lh-6'>Um novo negócio, mas há 50 anos com a mesma qualidade! Voltada para os produtos PET, nossa nova unidade traz a qualidade, inovação e sustentabilidade já marcados no DNA do Grupo Patense. Trabalhamos como Copackers para grandes marcas do Brasil e do mundo, produzindo inúmeros produtos para cães e gatos com excelência..</Card.Text>
+                                <Button className='w-100 border-0 p-3' style={{backgroundColor:'#491A76'}}>Saiba Mais Sobre Nós</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                </div>
+        </Sobre>
+        <Descricao className='bg-light'>
+            <div className='text-dark text-center mt-5 d-flex flex-column gap-2 align-items-center justify-content-center'>
+                <h1 style={{color:'#491A76'}}>Nossos Produtos</h1>
+            </div>
+            <div className='d-flex flex-column align-items-center justify-content-center w-100 respo-md'>
+                <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                    <Card.Body className='d-flex align-items-center justify-content-center gap-3 w-100 p-2'>
+                        <FaPaw className='' size={30} color={'#FF9200'}/>
+                        <Card.Title className='text-muted'>Linha Econômica</Card.Title>
+                    </Card.Body>
+                </Card>
+                <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                    <Card.Body className='d-flex align-items-center justify-content-center gap-3 w-100 p-2'>
+                        <FaPaw className='' size={30} color={'#FF9200'}/>
+                        <Card.Title className='text-muted'>Linha Mainstream</Card.Title>
+                    </Card.Body>
+                </Card>
+                <Card style={{ width: '100%'}} className='text-center border-0 mt-4 p-3'>
+                    <Card.Body className='d-flex align-items-center justify-content-center gap-3 w-100 p-2'>
+                        <FaPaw className='' size={30} color={'#FF9200'}/>
+                        <Card.Title className='text-muted'>Linha Premium</Card.Title>
+                    </Card.Body>
+                </Card>
+                <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                    <Card.Body className='d-flex align-items-center justify-content-center gap-3 w-100 p-2'>
+                        <FaPaw className='' size={30} color={'#FF9200'}/>
+                        <Card.Title className='text-muted'>Linha High Premium</Card.Title>
+                    </Card.Body>
+                </Card>
+                <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                    <Card.Body className='d-flex align-items-center justify-content-center gap-3 w-100 p-2'>
+                        <FaPaw className='' size={30} color={'#FF9200'}/>
+                        <Card.Title className='text-muted'>Linha High Premium</Card.Title>
+                    </Card.Body>
+                </Card>
+            </div>
+        </Descricao>
+        
+        <Produtos>
+            <img src='https://petsmellon.com.br/uploads/images/2021/08/7-1629997348.jpg' alt="" className='rounded-1' />
+            <div className=''>
+                <Card style={{ width: '100%' }} className='text-left border-0 mt-4 p-0 m-0 mb-4'>
+                    <Card.Body className='w-100 p-0'>
+                        <Card.Title className="mb-2 p-0 m-0 text-muted fs-1 text-left">Nossos Produtos</Card.Title>
+                        <Card.Text className='text-dark lh-6'>Atuando com copacker na fabricação de alimentos para animais, oferecemos soluções de altíssima qualidade para os nossos parceiros.
+                        Todos os nossos produtos são balanceados e estão de acordo com as exigências dos órgãos fiscalizadores. Possuimos alta tecnologia nos processos
+                        industriais e o nosso portifólio engloba toda a linha de alimentos completos, alimentos específicos e os produtos mastigáveis destinados aos animais de companhia.</Card.Text>
+                        <img src='https://petsmellon.com.br/uploads/images/2022/06/6-stand-up-pouch-1655323377.png ' alt="" className='rounded-1' style={{width:'50%'}}/>
+                        <Button className='w-100 border-0 p-3' style={{backgroundColor:'#491A76'}}>Ver Sobre Produtos</Button>
+                    </Card.Body>
+                </Card>
+                <div className='w-100 mt-5 d-flex flex-column gap-3 '>
+                    <FaPaw className='m-auto' size={40} color={'#491A76'}/>
+                    <h1 className='text-center' style={{color:'#FF9200'}}>Nossos Serviços</h1>
+                    <p className='text-center lh-6'>A Pets Mellon tem o padrão alto em tecnologia e desenvolvimento. A empresa buscou inovar no desenvolvimento dos seus serviços com o propósito de fornecer aos nossos clientes não só um produto de excelente qualidade, mas também uma experiência de serviço diferenciado.</p>
+                </div>  
+                <div className='w-100 mt-5 d-flex flex-column gap-3 bg-light p-3 rounded-1'>
+                    <FaPaw className='m-auto' size={40} color={'#FF9200'}/> 
+                    <h4 className='text-center' style={{color:'#491A76'}}>Industrialização de alimento completo e incompleto</h4>
+                    <p className='text-center lh-6'>Eficiência e Tecnologia, preceitos básicos para qualquer indústria Pets Mellon. Estamos preparados para produzir o seu produto em grande escala com o padrão máximo de qualidade.</p>
+                </div>  
+                <div className='w-100 mt-5 d-flex flex-column gap-3  p-3 rounded-1'>
+                    <FaPaw className='m-auto' size={40} color={'#FF9200'}/>
+                    <h4 className='text-center' style={{color:'#491A76'}}>Logística</h4>
+                    <p className='text-center lh-6'>Empresa conta com veículos próprios e toda a logística para a entrega do produto, tanto nacionalmente quanto internacionalmente. A Pets Mellon já exportou para mais de 50 países e possui estrutura interna completa para atender a sua demanda. Faremos todo o processo de preparação e separação de cargas.</p>
+                </div>  
+                <div className='w-100 mt-5 d-flex flex-column gap-3 bg-light p-3 rounded-1'>
+                    <FaPaw className='m-auto' size={40} color={'#FF9200'}/>
+                    <h4 className='text-center' style={{color:'#491A76'}}>Armazenamento de produto completo e incompleto</h4>
+                    <p className='text-center lh-6'>Temos estrutura completa para armazenamento de produtos em nossa infraestrutura física. Toda a empresa possui SIF e está preparada para melhor te atender.</p>
+                </div>  
+                <div className='w-100 mt-5 d-flex flex-column gap-3  p-3 rounded-1'>
+                    <FaPaw className='m-auto' size={40} color={'#FF9200'}/>
+                    <h4 className='text-center' style={{color:'#491A76'}}>Criação de kits promocionais para a sua marca</h4>
+                    <p className='text-center lh-6'>A Pets Mellon busca sempre inovação e trabalhamos sugerindo kits promocionais que podem ser inseridos dentro da proposta de venda de cada marca parceira. Elaboramos, criamos e sugerimos formas diferentes para uma atuação distinta por parte da marca dentro do mercado pet.</p>
+                </div>
+                <div className='w-100 mt-5 d-flex flex-column gap-3 bg-light p-3 rounded-1'>
+                    <FaPaw className='m-auto' size={40} color={'#FF9200'}/>
+                    <h4 className='text-center' style={{color:'#491A76'}}>Assessoria de marketing para desenvolvimento de produto</h4>
+                    <p className='text-center lh-6'>Assessoria de marketing para desenvolvimento de produto.</p>
+                </div> 
+            </div>
+        </Produtos>
+    </div>
+    );
+}
+
+
+
+
+
+
+
+<img src={Pets} alt="" className='rounded-1' />
+<div className='d-flex flex-column gap-3 '>
+    <Card style={{ width: '100%' }} className='text-left border-0 mt-4 p-0 m-0 mb-4 bg-light'>
+        <Card.Body className='w-100 p-0'>
+                <h1 className="mb-2 p-0 m-0 text-muted fs-1 text-left d-flex flex-row align-items-center mt-3 mb-3">Nossos Produtos
+                <IoPawOutline className='ms-2' size={40} color={'#FF9200'}/>
+                </h1>
+            <Card.Text className='text-dark text-left lh-6 '>Atuando com copacker na fabricação de alimentos para animais, oferecemos soluções de altíssima qualidade para os nossos parceiros.
+            Todos os nossos produtos são balanceados e estão de acordo com as exigências dos órgãos fiscalizadores. Possuimos alta tecnologia nos processos
+            industriais e o nosso portifólio engloba toda a linha de alimentos completos, alimentos específicos e os produtos mastigáveis destinados aos animais de companhia.</Card.Text>
+            <img src={ProdutoImg} alt="" className='rounded-circle mb-3' style={{width:'80%'}}/>
+            <Button className='w-100 border-0 p-3 d-flex align-items-center justify-content-center  mb-3'style={{backgroundColor:'#491A76'}}>
+                <p className='d-flex align-items-center justify-content-end m-auto w-75'>Saiba Mais</p>
+                <IoPawOutline className='m-auto w-50' size={30} color='#FFF'/>
+            </Button>
+        </Card.Body>
+    </Card>

@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter } from "react-router-dom";
+import { Conheca } from "./pages/Conheca";
+import { Home } from "./pages/Home";
+import { Produto } from "./pages/Produtos";
+import { Servico } from "./pages/Servicos";
+import { Customizacoes } from "./pages/Customizacoes";
+import { Parceria } from "./pages/Parceria";
+import { Blog } from "./pages/Blog";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+export const Router = createBrowserRouter([
+
+    {
+      path:'/',
+      element:<Home/>
+    },
+    {
+      path:'/conheca',
+      element:<Conheca/>
+    },
+    {
+      path:'/produtos',
+      element:<Produto/>
+    },
+    {
+      path:'/servicos',
+      element:<Servico/>
+    },
+    {
+      path:'/customizacoes',
+      element:<Customizacoes/>
+    },
+    {
+      path:'/parceria',
+      element:<Parceria/>
+    },
+    {
+      path:'/blog',
+      element:<Blog/>
+    },
+
+])
+  
