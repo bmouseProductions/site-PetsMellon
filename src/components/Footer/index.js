@@ -20,4 +20,4 @@ export const Footer = ()=>{
             </Container>
         </div>
     );
-}
+}  
