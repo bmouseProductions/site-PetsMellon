@@ -183,3 +183,132 @@ export const Home=()=>{
             </Button>
         </Card.Body>
     </Card>
+
+
+
+       <Cards className=''>
+                    <Row className='bg-success'>
+                    <Col sm={6}>
+                        <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                            <Card.Body className='d-flex align-items-center justify-content-start gap-3 w-100 p-2'>
+                                <FaPaw className='' size={30} color={'#fff'}/>
+                                <h3 className='text-white'>Linha Econômica</h3>
+                            </Card.Body>
+                            <div className='d-flex flex-column gap-3 text-white text-left  align-items-start ps-3 w-100'>
+                                <li>√ 65% de Cárneos</li>
+                                <li>√ Corante Artificial</li>
+                                <li>√ Conservante Artificial</li>
+                                <li>√ Palatabilizante Suíno</li>
+                                <li># embalagens de 65g à 1,0kg</li>
+                            </div>
+                        </Card>
+                    </Col>
+                    <Col sm={6}>
+                        <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                            <Card.Body className='d-flex align-items-center justify-content-start gap-3 w-100 p-2'>
+                                <FaPaw className='' size={30} color={'#fff'}/>
+                                <h3 className='text-white'>Linha Mainstream</h3>
+                            </Card.Body>
+                            <div className='d-flex flex-column gap-3 text-white text-left  align-items-start ps-3 w-100'>
+                                <li>√ 70% de Cárneos</li>
+                                <li>√ Conservante Artificial</li>
+                                <li>√ Corante Artificial</li>
+                                <li>√ Palatabilizante Suíno</li>
+                                <li># embalagens de 65g à 1,0kg</li>
+                            </div>
+                        </Card>
+                    </Col>
+                        <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                            <Card.Body className='d-flex align-items-center justify-content-start gap-3 w-100 p-2'>
+                                <FaPaw className='' size={30} color={'#fff'}/>
+                                <h3 className='text-white'>Linha Premium</h3>
+                            </Card.Body>
+                            <div className='d-flex flex-column gap-3 text-white text-left  align-items-start ps-3 w-100'>
+                                <li>√ 75% de Cárneos</li>
+                                <li>√ Conservante Artificial</li>
+                                <li>√ Corante Artificial</li>
+                                <li>√ Palatabilizante Frango</li>
+                                <li># embalagens de 50g à 1,0kg</li>
+                            </div>
+                        </Card>
+                        <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                            <Card.Body className='d-flex align-items-center justify-content-start gap-3 w-100 p-2'>
+                                <FaPaw className='' size={30} color={'#fff'}/>
+                                <h3 className='text-white'>Linha High Premium</h3>
+                            </Card.Body>
+                            <div className='d-flex flex-column gap-3 text-white align-items-start ps-3 w-100'>
+                                <li>√ 78% de Cárneos</li>
+                                <li>√ Conservante Natural</li>
+                                <li>√ Corante Artificial</li>
+                                <li>√ Palatabilizante Natural(sem aditivos ou conservantes)</li>
+                                <li>√ Com adição de Prebióticos e Probiótico.</li>
+                                <li># embalagens de 30g à 1,0kg</li>
+                            </div>
+                        </Card>
+                        <Card style={{ width: '100%' }} className='text-center border-0 mt-4 p-3'>
+                            <Card.Body className='d-flex align-items-center justify-content-start gap-3 w-100 p-2'>
+                                <FaPaw className='' size={30} color={'#fff'}/>
+                                <h3 className='text-white'>Linha Super Premium</h3>
+                            </Card.Body>
+                            <div className='d-flex flex-column gap-3 text-white text-left align-items-start ps-3 w-100'>
+                                <li>√ 80% de Cárneos</li>
+                                <li>√ Conservante Natural</li> 
+                                <li>√ Corante Natural</li> 
+                                <li>√ Palatabilizante Selection(sem adição de cereais, açúcar, sem agrotóxico, livre de soja)</li> 
+                                <li>√ Com adição de Prebióticos e Probiótico.</li> 
+                                <li># embalagens de 30g à 1,0kg</li>
+                            </div>
+                        </Card>  
+                        </Row>
+                    </Cards>
+
+
+
+
+
+
+
+                    <div className='w-100 bg-light sticky-top m-auto'>
+      {['sm'].map((expand) => (
+        <Navbar key={expand} bg="light" expand={expand} className="header-container">
+          <Container fluid className='w-100 m-auto cont'>
+            <Navbar.Brand href="/"><img src={Logo} alt="Pets Mellon" title='Pets Mellon' className='logo-menu'/></Navbar.Brand>
+            <Navbar.Toggle className='border-0' aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+         
+              style={{backgroundColor:'#EF2E72'}}
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton className=''>
+                  <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className='d-flex align-items-center'>
+                    <img src={LogoBlack} alt="Pets Mellon" title='Pets Mellon' style={{width:'50%'}}/>
+                  </Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body className='header-nav text-white'>
+                  <Nav className="gap-3 fs-5 menu">
+                    <Link to={'/'}className='text-white' title='Home'>Home</Link>
+                    <Link  to={'/conheca'} className='text-white' title='Conheça'>Conheça</Link>
+                    <Link to={'/produtos'} className='text-white' title='Produtos'>Produtos</Link>
+                    <Link to={'/servicos'}  className='text-white' title='Serviços'>Serviços</Link>
+                    <Link to={'/customizacoes'}  className='text-white' title='Customizações'>Customizações</Link>
+                    <Link to={'/parceria'} className='text-white' title='Parceria'>Parceria</Link>
+                    <a href="https://patense.com.br/pt/views/" className='text-white' title='A Patense'>A Patense</a>
+                    <Link to={'/blog'} className='text-white' title='Blog'>Blog</Link>
+                    <NavDropdown title="Sustentabilidade" id="basic-nav-dropdown" className='text-white menu'>
+                        <NavDropdown.Item href="https://petsmellon.com.br/politica-ambiental.pdf" target="_blank" className='text-dark' title='Política Ambiental'>Política Ambiental</NavDropdown.Item>
+                        <NavDropdown.Item href="https://petsmellon.com.br/plano-de-implementacao.pdf" target="_blank" className='text-dark' title='Palno de Implementação'>Plano de Implementação</NavDropdown.Item>
+                    </NavDropdown>
+                    <Link to={'/contato'} className='btn border-0 btn-menu text-white' style={{backgroundColor:'#FF9200'}}>Contato</Link>
+                  </Nav>
+                </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
+    </div>
+
+
+    
+                
