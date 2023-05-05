@@ -7,16 +7,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import LogoWhite from '../../assets/image/petsmellonWhite.svg'
 import Logo from '../../assets/image/logo.png'
-import { Link, useNavigate } from 'react-router-dom';
 import brazil from '../../assets/image/brazil.png'
 import spain from '../../assets/image/spain.png'
 import unite from '../../assets/image/united-states.png'
+import { Link, useNavigate } from 'react-router-dom';
 
-export const Header = (props)=> {
+export const HeaderESP = (props)=> {
 
   return (
     <>
-         <div className='d-flex p-2 align-items-center justify-content-end gap-3' style={{backgroundColor:'#f52369'}}>
+      <div className='d-flex p-2 align-items-center justify-content-end gap-3' style={{backgroundColor:'#f52369'}}>
         <Link to="/site/" className='link-white text-white'><img src={brazil} alt="BR" style={{width:'25px'}}/></Link>
         <Link to="/site/en" className='link-white text-white'><img src={unite} alt="EN" style={{width:'25px'}}/></Link>
         <Link to="/site/esp" className='link-white text-white'><img src={spain} alt="ES" style={{width:'25px'}}/></Link>
@@ -34,16 +34,15 @@ export const Header = (props)=> {
               </Offcanvas.Header>
               <Offcanvas.Body className='d-flex  menu-xxl'>
                 <Nav className="menu">
-                  <Link to="/site/" className='link-white text-muted'>Home</Link >
-                  <Link to="/site/conheca" className='link-white'>Conheça</Link>
-                  <Link to="/site/produtos" className='link-white'>Produtos</Link>
-                  <Link to="/site/servicos" className='link-white'>Serviços</Link>
-                  <Link to="/site/customizacoes" className='link-white'>Customizações</Link>
-                  <Link to="/site/parceria" className='link-white'>Parceria</Link>
-                  <Link to="/site/en" className='link-white'>en</Link>
-                  <a href='https://patense.com.br/' target={'_blank'} className='link-white'>A Patense</a>
+                  <Link to="/site/esp" className='link-white text-muted'>Hogar</Link >
+                  <Link to="/site/conheca-esp" className='link-white'>Conozca</Link>
+                  <Link to="/site/produtos-esp" className='link-white'>Productos</Link>
+                  <Link to="/site/servicos-esp" className='link-white'>Servicios</Link>
+                  <Link to="/site/customizacoes-esp" className='link-white'>Personalizaciones</Link>
+                  <Link to="/site/parceria-esp" className='link-white'>Socios</Link>
+                  <a href='https://patense.com.br/' target={'_blank'} className='link-white'>Patentar</a>
                    {/* <Link to="/blog" className='link-white'>Blog</Link> */}
-                  <NavDropdown title="Sustentabilidade" id={`offcanvasNavbarDropdown-expand-${expand}`} className='link-white' style={{fontSize:'17.6px'}}>
+                  <NavDropdown title="Sostenibilidad" id={`offcanvasNavbarDropdown-expand-${expand}`} className='link-white' style={{fontSize:'17.6px'}}>
                     <NavDropdown.Item>
                         <Link to ="/site/pdf-ambiental" >Política Ambiental</Link>
                     </NavDropdown.Item>
@@ -51,7 +50,7 @@ export const Header = (props)=> {
                       <Link to='/site/pdf-sustentabilidade' >Plano de Sustentabilidade</Link>
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Link to="/site/contato" className='text-white rounded-1 text-center p-2 ps-3 pe-3' style={{backgroundColor:"#F58525"}}>Contato</Link>
+                  <Link to="/site/contato-esp" className='text-white rounded-1 text-center p-2 ps-3 pe-3' style={{backgroundColor:"#F58525"}}>Contacto</Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

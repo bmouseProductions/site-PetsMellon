@@ -1,10 +1,10 @@
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineFacebook } from "react-icons/ai";
-import { Container } from '../../components/style';
+import { Container } from '../style';
 
 
 
-export const Footer = ()=>{
+export const FooterESP = ()=>{
     return (
         <div style={{backgroundColor:'#F52369'}} >
             <Container className='text-white d-flex flex-column gap-2 p-3'>
@@ -16,7 +16,7 @@ export const Footer = ()=>{
                         <AiOutlineFacebook size={35}/>
                     </a>
                 </div>
-                <span className='text-center mb-3 fs-5'> Todos os direitos reservados. Desenvolvido por:<a href="https://www.bmouseproductions.com/" target={'_blank'} className='text-white fs-5'> Bmouse Productions</a></span>
+                <span className='text-center mb-3 fs-5'> Todos los derechos reservados. Desarrollado por:<a href="https://www.bmouseproductions.com/" target={'_blank'} className='text-white fs-5'>Producciones Bmouse</a></span>
             </Container>
         </div> 
     );
