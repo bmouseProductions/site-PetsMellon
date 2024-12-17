@@ -25,6 +25,7 @@ import { ParceriaEN } from "./pages/Parceria/indexEN";
 import { ParceriaESP } from "./pages/Parceria/indexESP";
 
 import { Blog } from "./pages/Blog";
+import { SinglePage } from "./pages/SinglePage";
 
 import { Contato } from "./pages/Contato/index";
 import { ContatoEN } from "./pages/Contato/indexEN";
@@ -32,120 +33,134 @@ import { ContatoESP } from "./pages/Contato/indexESP";
 
 import { Error } from "./pages/Error";
 
-
 import { MyPDFViewer } from "./pages/PlanoDeImplementação";
 import { MyPDFViewerAmbiental } from "./pages/PoliticaAmbiental";
-import { SinglePage } from "./pages/SinglePage";
 import { ErrorEN } from "./pages/Error/indexEN";
 import { ErrorESP } from "./pages/Error/indexESP";
-
+import { Etica } from "./pages/Etica/Etica";
+import SejaUmParceiro from "./pages/Parceiro/SejaUmParceiro";
+import BeOurParner from "./pages/Parner/BeOurParner";
 
 export const Router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
 
-    {
-      path:'/site',
-      element:<Home/>
-    },
-    {
-      path:'/site/en',
-      element:<HomeEN/>
-    },
-    {
-      path:'/site/esp',
-      element:<HomeESP/>
-    },
-    {
-      path:'/site/conheca',
-      element:<Conheca/>
-    },
-    {
-      path:'/site/conheca-en',
-      element:<ConhecaEN/>
-    },
-    {
-      path:'/site/conheca-esp',
-      element:<ConhecaESP/>
-    },
-    {
-      path:'/site/produtos',
-      element:<Produto/>
-    },
-    {
-      path:'/site/produtos-en',
-      element:<ProdutoEN/>
-    },
-    {
-      path:'/site/produtos-esp',
-      element:<ProdutoESP/>
-    },
-    {
-      path:'/site/servicos',
-      element:<Servico/>
-    },
-    {
-      path:'/site/servicos-en',
-      element:<ServicoEN/>
-    },
-    {
-      path:'/site/servicos-esp',
-      element:<ServicoESP/>
-    },
-    {
-      path:'/site/customizacoes',
-      element:<Customizacoes/>
-    },
-    {
-      path:'/site/customizacoes-en',
-      element:<CustomizacoesEN/>
-    },
-    {
-      path:'/site/customizacoes-esp',
-      element:<CustomizacoesESP/>
-    },
-    {
-      path:'/site/parceria',
-      element:<Parceria/>
-    },
-    {
-      path:'/site/parceria-en',
-      element:<ParceriaEN/>
-    },
-    {
-      path:'/site/parceria-esp',
-      element:<ParceriaESP/>
-    },
-    {
-      path:'/site/blog',
-      element:<Blog/>
-    },
-    {
-      path:'/site/contato',
-      element:<Contato/>
-    },
-    {
-      path:'/site/contato-en',
-      element:<ContatoEN/>
-    },
-    {
-      path:'/site/contato-esp',
-      element:<ContatoESP/>
-    },
-    {
-      path:'/site/pdf-sustentabilidade',
-      element:<MyPDFViewer/>
-    },
-    {
-      path:'/site/pdf-ambiental',
-      element:<MyPDFViewerAmbiental/>
-    },
-    {
-      path:'/site/single-page',
-      element:<SinglePage/>
-    },
-    {
-      path:'*',
-      element:<Error/>
-    },
-
-])
-  
+  {
+    path: "/en",
+    element: <HomeEN />,
+  },
+  {
+    path: "/esp",
+    element: <HomeESP />,
+  },
+  {
+    path: "/conheca",
+    element: <Conheca />,
+  },
+  {
+    path: "/conheca-en",
+    element: <ConhecaEN />,
+  },
+  {
+    path: "/conheca-esp",
+    element: <ConhecaESP />,
+  },
+  {
+    path: "/produtos",
+    element: <Produto />,
+  },
+  {
+    path: "/produtos-en",
+    element: <ProdutoEN />,
+  },
+  {
+    path: "/produtos-esp",
+    element: <ProdutoESP />,
+  },
+  {
+    path: "/servicos",
+    element: <Servico />,
+  },
+  {
+    path: "/servicos-en",
+    element: <ServicoEN />,
+  },
+  {
+    path: "/servicos-esp",
+    element: <ServicoESP />,
+  },
+  {
+    path: "/customizacoes",
+    element: <Customizacoes />,
+  },
+  {
+    path: "/customizacoes-en",
+    element: <CustomizacoesEN />,
+  },
+  {
+    path: "/customizacoes-esp",
+    element: <CustomizacoesESP />,
+  },
+  {
+    path: "/parceria",
+    element: <Parceria />,
+  },
+  {
+    path: "/parceria-en",
+    element: <ParceriaEN />,
+  },
+  {
+    path: "/parceria-esp",
+    element: <ParceriaESP />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
+    path: "/blog/:url_amigavel",
+    element: <SinglePage />,
+  },
+  {
+    path: "/contato",
+    element: <Contato />,
+  },
+  {
+    path: "/contato-en",
+    element: <ContatoEN />,
+  },
+  {
+    path: "/codigo-de-etica",
+    element: <Etica />,
+  },
+  {
+    path: "/contato-esp",
+    element: <ContatoESP />,
+  },
+  {
+    path: "/pdf-sustentabilidade",
+    element: <MyPDFViewer />,
+  },
+  {
+    path: "/pdf-ambiental",
+    element: <MyPDFViewerAmbiental />,
+  },
+  {
+    path: "/single-page/:url_amigavel",
+    element: <SinglePage />,
+  },
+  {
+    path: "/seja-um-parceiro",
+    element: <SejaUmParceiro />,
+  },
+  {
+    path: "/be-our-partner",
+    element: <BeOurParner />,
+  },
+  /*   {
+    path: "*",
+    element: <Error />,
+  }, */
+]);

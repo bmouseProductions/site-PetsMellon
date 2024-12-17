@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from 'react-bootstrap';
+/* import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Header } from "../../componets/Header"
 import QuemSomos from '../../assets/image/sobrepets.webp'
 import Produto01 from '../../assets/image/produto01.png'
@@ -18,7 +18,7 @@ import { FaEarlybirds } from 'react-icons/fa';
 import { FaPaw } from 'react-icons/fa';
 import { SiMaterialdesignicons } from 'react-icons/si';
 
-/* /index.html 200
+index.html 200
 
 export const Home=()=>{
 
@@ -311,4 +311,4 @@ export const Home=()=>{
 
 
     
-                
+                 */
